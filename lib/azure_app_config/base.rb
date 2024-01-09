@@ -37,6 +37,14 @@ module AzureAppConfig
       parse_fetch_response response
     end
 
+    def labels(name: nil)
+      name, _ = normalise_parameters(name: name, label: nil)
+      path = "/labels"
+
+      query_params = URI.encode_www_form(name: name.join(","))
+      parse_labels_response client.get(path, query_params)
+    end
+
     def keys(name: nil)
       name, = normalise_parameters(name: name, label: nil)
       path = "/keys"
@@ -119,6 +127,10 @@ module AzureAppConfig
     def parse_keys_response(response)
       data = JSON.parse(response.body)
       data["items"].map { |item| item["name"].gsub(key_prefix, "") }
+    end
+
+    def parse_labels_response(response)
+      JSON.parse(response.body)["items"].map { |item| item["name"] }
     end
   end
 end

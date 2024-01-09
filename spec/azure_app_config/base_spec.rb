@@ -311,6 +311,51 @@ RSpec.describe AzureAppConfig::Base do
     end
   end
 
+  describe "#labels" do
+    subject(:result) { described_class.instance.labels(name: name) }
+
+    describe "without name param" do
+      let(:name) { nil }
+
+      it "returns all labels" do
+        VCR.use_cassette("labels/without_name_param") do
+          expect(result).to be_a Array
+
+          expect(result.size).to be > 0
+          expect(result).to match_array([nil, "prod", "test"])
+        end
+      end
+    end
+
+    describe "with name param" do
+      describe "as string" do
+        let(:name) { "p*" }
+
+        it "returns matching labels" do
+          VCR.use_cassette("labels/with_name_param_as_string") do
+            expect(result).to be_a Array
+
+            expect(result.size).to eq 1
+            expect(result).to(be_all { |k| k.start_with?(name.chomp("*")) })
+          end
+        end
+      end
+
+      describe "as array" do
+        let(:name) { ["prod", "test"] }
+
+        it "returns matching labels" do
+          VCR.use_cassette("labels/with_name_param_as_array") do
+            expect(result).to be_a Array
+
+            expect(result.size).to eq 2
+            expect(result).to(be_all { |k| name.include?(k) })
+          end
+        end
+      end
+    end
+  end
+
   describe "#method_missing" do
     it "testing if all the above methods work as expected" do
       expect(described_class).to respond_to(:all)
@@ -318,6 +363,7 @@ RSpec.describe AzureAppConfig::Base do
       expect(described_class).to respond_to(:disabled?)
       expect(described_class).to respond_to(:enabled?)
       expect(described_class).to respond_to(:keys)
+      expect(described_class).to respond_to(:labels)
 
       expect(described_class).not_to respond_to(:some_wrong_method)
     end
