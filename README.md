@@ -50,6 +50,11 @@ AzureAppConfig::Base.all(name: "key1*") # => [{ etag: "...", id: ".appconfig.fea
 AzureAppConfig::Base.all(name: "key1*", label: "prod") # => [{ etag: "...", id: ".appconfig.featureflag/key1", label: "prod", value: { enabled: true, ...}, ...}, { etag: "...", id: ".appconfig.featureflag/key12", label: "prod", value: { enabled: true, ...}, ...}, ...]
 AzureAppConfig::Base.all(name: ["key1", "key2"], label: "prod") # => [{ etag: "...", id: ".appconfig.featureflag/key1", label: "prod", value: { enabled: true, ...}, ...}, { etag: "...", id: ".appconfig.featureflag/key2", label: "prod", value: { enabled: true, ...}, ...}, ...]
 
+# Fetches all labels
+AzureAppConfig::Base.labels # => [null, "prod", "test"] # null indicates the default (blank) label.
+AzureAppConfig::Base.labels(name: "p*") # => ["prod"]
+AzureAppConfig::Base.labels(name: ["prod", "test"]) # => ["prod", "test"]
+
 
 # Check if a key is enabled
 

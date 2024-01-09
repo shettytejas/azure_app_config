@@ -3,7 +3,7 @@
 require_relative "azure_app_config/base"
 
 module AzureAppConfig
-  VERSION = "1.0"
+  VERSION = "1.1.0"
 
   class InvalidTypeError < StandardError; end
   class ExceededLimitError < StandardError; end
