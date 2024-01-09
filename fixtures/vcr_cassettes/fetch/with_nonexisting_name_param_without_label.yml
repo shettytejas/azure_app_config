@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://inbox.azconfig.io/kv/.appconfig.featureflag/SNA.Example-1?api-version=1.0&label=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Ms-Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      X-Ms-Content-Sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      Authorization:
+      - HMAC-SHA256 Credential=TjvF&SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=TAav6aHYMa9evvkRpAf/UO9d7YPcC6Y4Eb5TYvn0ttA=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - inbox.azconfig.io
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Sync-Token:
+      - zAJw6V16=NjoxMyM1NDIzODY2;sn=5423866
+      X-Ms-Request-Id:
+      - 87420336-30c2-4db9-9ad5-d6fc5d8dcfde
+      X-Ms-Correlation-Request-Id:
+      - 87420336-30c2-4db9-9ad5-d6fc5d8dcfde
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 09 Jan 2024 07:02:58 GMT
+recorded_with: VCR 6.2.0

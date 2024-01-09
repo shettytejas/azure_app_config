@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://inbox.azconfig.io/keys?api-version=1.0&name=.appconfig.featureflag/*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Ms-Date:
+      - Tue, 09 Jan 2024 07:03:48 GMT
+      X-Ms-Content-Sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      Authorization:
+      - HMAC-SHA256 Credential=TjvF&SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=kUTxirIrlimfODcanzQWcn69zGAA6jwUyE5RLJAqLvc=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - inbox.azconfig.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Jan 2024 07:03:48 GMT
+      Content-Type:
+      - application/vnd.microsoft.appconfig.keyset+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Sync-Token:
+      - zAJw6V16=NjoxMyM1NDIzODY2;sn=5423866
+      X-Ms-Request-Id:
+      - 3765afaf-a284-45a9-8675-da755177590c
+      X-Ms-Correlation-Request-Id:
+      - 3765afaf-a284-45a9-8675-da755177590c
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"name":".appconfig.featureflag/SNA.Example"},{"name":".appconfig.featureflag/SNA.Example10"},{"name":".appconfig.featureflag/SNA.Example11"},{"name":".appconfig.featureflag/SNA.Example12"},{"name":".appconfig.featureflag/SNA.Example13"},{"name":".appconfig.featureflag/SNA.Example14"},{"name":".appconfig.featureflag/SNA.Example15"},{"name":".appconfig.featureflag/SNA.Example16"},{"name":".appconfig.featureflag/SNA.Example17"},{"name":".appconfig.featureflag/SNA.Example18"},{"name":".appconfig.featureflag/SNA.Example19"},{"name":".appconfig.featureflag/SNA.Example2"},{"name":".appconfig.featureflag/SNA.Example20"},{"name":".appconfig.featureflag/SNA.Example21"},{"name":".appconfig.featureflag/SNA.Example22"},{"name":".appconfig.featureflag/SNA.Example23"},{"name":".appconfig.featureflag/SNA.Example24"},{"name":".appconfig.featureflag/SNA.Example25"},{"name":".appconfig.featureflag/SNA.Example26"},{"name":".appconfig.featureflag/SNA.Example27"},{"name":".appconfig.featureflag/SNA.Example28"},{"name":".appconfig.featureflag/SNA.Example29"},{"name":".appconfig.featureflag/SNA.Example3"},{"name":".appconfig.featureflag/SNA.Example30"},{"name":".appconfig.featureflag/SNA.Example31"},{"name":".appconfig.featureflag/SNA.Example32"},{"name":".appconfig.featureflag/SNA.Example33"},{"name":".appconfig.featureflag/SNA.Example34"},{"name":".appconfig.featureflag/SNA.Example35"},{"name":".appconfig.featureflag/SNA.Example36"},{"name":".appconfig.featureflag/SNA.Example37"},{"name":".appconfig.featureflag/SNA.Example38"},{"name":".appconfig.featureflag/SNA.Example39"},{"name":".appconfig.featureflag/SNA.Example4"},{"name":".appconfig.featureflag/SNA.Example40"},{"name":".appconfig.featureflag/SNA.Example41"},{"name":".appconfig.featureflag/SNA.Example42"},{"name":".appconfig.featureflag/SNA.Example43"},{"name":".appconfig.featureflag/SNA.Example44"},{"name":".appconfig.featureflag/SNA.Example45"},{"name":".appconfig.featureflag/SNA.Example46"},{"name":".appconfig.featureflag/SNA.Example47"},{"name":".appconfig.featureflag/SNA.Example48"},{"name":".appconfig.featureflag/SNA.Example49"},{"name":".appconfig.featureflag/SNA.Example5"},{"name":".appconfig.featureflag/SNA.Example50"},{"name":".appconfig.featureflag/SNA.Example6"},{"name":".appconfig.featureflag/SNA.Example7"},{"name":".appconfig.featureflag/SNA.Example8"},{"name":".appconfig.featureflag/SNA.Example9"},{"name":".appconfig.featureflag/SNA.Prod"},{"name":".appconfig.featureflag/SNA.test"}]}'
+  recorded_at: Tue, 09 Jan 2024 07:03:48 GMT
+recorded_with: VCR 6.2.0

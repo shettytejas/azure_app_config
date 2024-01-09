@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://inbox.azconfig.io/kv?api-version=1.0&key=.appconfig.featureflag/*&label=prod,test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Ms-Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      X-Ms-Content-Sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      Authorization:
+      - HMAC-SHA256 Credential=TjvF&SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=BlxMipb0mkjs59rHUxQM9gr10hz3V3Jtzmw/2atIcsU=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - inbox.azconfig.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      Content-Type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Sync-Token:
+      - zAJw6V16=NjoxMyM1NDIzODY2;sn=5423866
+      X-Ms-Request-Id:
+      - 89527d77-6269-4a8f-b3e3-c4f900241e97
+      X-Ms-Correlation-Request-Id:
+      - 89527d77-6269-4a8f-b3e3-c4f900241e97
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"etag":"KzhvSwfZBK6SPtE8u0Xvdlv01-5WUcppN_1jnx_aT0U","key":".appconfig.featureflag/SNA.Example","label":"prod","content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example\",\"description\":\"\",\"enabled\":true,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-09T06:45:06+00:00"},{"etag":"-wI3b3rlLldwcFVb8HYyFskbDNlGFSVQF3wMBRsd1kY","key":".appconfig.featureflag/SNA.Example","label":"test","content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-09T05:51:42+00:00"},{"etag":"VLC7LNGGyO1jzI8Fh3GizRpEVFrQ8vCjsNoV1pDvkFo","key":".appconfig.featureflag/SNA.Prod","label":"prod","content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Prod\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-09T05:51:12+00:00"},{"etag":"28mnu32NPW0EqxIT4UfV2V3STxywZlYtMMWGACVUIlA","key":".appconfig.featureflag/SNA.test","label":"test","content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.test\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-09T05:51:20+00:00"}]}'
+  recorded_at: Tue, 09 Jan 2024 07:02:58 GMT
+recorded_with: VCR 6.2.0

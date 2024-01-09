@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://inbox.azconfig.io/keys?api-version=1.0&name=.appconfig.featureflag/SNA.Example2,.appconfig.featureflag/SNA.Example3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Ms-Date:
+      - Tue, 09 Jan 2024 07:07:02 GMT
+      X-Ms-Content-Sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      Authorization:
+      - HMAC-SHA256 Credential=TjvF&SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=iSQIljU6homQshmkjjWwA/h/r6IVRusbC/fv2NujVz8=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - inbox.azconfig.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Jan 2024 07:07:03 GMT
+      Content-Type:
+      - application/vnd.microsoft.appconfig.keyset+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Sync-Token:
+      - zAJw6V16=NjoxMyM1NDIzODY2;sn=5423866
+      X-Ms-Request-Id:
+      - 5d0c2cf8-8793-4618-8141-376bbf462c29
+      X-Ms-Correlation-Request-Id:
+      - 5d0c2cf8-8793-4618-8141-376bbf462c29
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"name":".appconfig.featureflag/SNA.Example2"},{"name":".appconfig.featureflag/SNA.Example3"}]}'
+  recorded_at: Tue, 09 Jan 2024 07:07:03 GMT
+recorded_with: VCR 6.2.0

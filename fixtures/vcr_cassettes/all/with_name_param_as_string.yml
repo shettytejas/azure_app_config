@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://inbox.azconfig.io/kv?api-version=1.0&key=.appconfig.featureflag/SNA.Example2*&label=*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Ms-Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      X-Ms-Content-Sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      Authorization:
+      - HMAC-SHA256 Credential=TjvF&SignedHeaders=x-ms-date;host;x-ms-content-sha256&Signature=j1PVfYvZBFTnoxam1cYcS/Uzub6eAULSRpwnI+L6B4E=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - inbox.azconfig.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 09 Jan 2024 07:02:58 GMT
+      Content-Type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Sync-Token:
+      - zAJw6V16=NjoxMyM1NDIzODY2;sn=5423866
+      X-Ms-Request-Id:
+      - 8f759382-a23a-4351-b419-028533542ecb
+      X-Ms-Correlation-Request-Id:
+      - 8f759382-a23a-4351-b419-028533542ecb
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"etag":"F325Fo7klLRxiWXyebvm1mi83keQ78qWU-D05PyUiw0","key":".appconfig.featureflag/SNA.Example2","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example2\",\"description\":\"\",\"enabled\":true,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-09T06:44:57+00:00"},{"etag":"AkJCFcnp9fvXeo8OlA365wfGEQH_o-vmHV_uYB4EQSo","key":".appconfig.featureflag/SNA.Example20","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example20\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:49:54+00:00"},{"etag":"TA37Ak2a4Xiz4QRaFCglLTeh4N-94Plqc0BLs-JFGQI","key":".appconfig.featureflag/SNA.Example21","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example21\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:49:58+00:00"},{"etag":"5_-ga2W0YJHm0c3rZRk9W0iQ3YGrHS_PGnqYPkkZ7r8","key":".appconfig.featureflag/SNA.Example22","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example22\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:01+00:00"},{"etag":"G46j8kqG8NbpVYNfIH_0kBbuyF2TgKnMOxmxsZTX6aM","key":".appconfig.featureflag/SNA.Example23","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example23\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:05+00:00"},{"etag":"tseGkFJe0GVYnOORz0O71t6uloZPok_KZnMIEGt4zhI","key":".appconfig.featureflag/SNA.Example24","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example24\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:08+00:00"},{"etag":"66dYiUZIcpD4WqgvXnapaG4v4qB_QkVlGAGwbCRr8NY","key":".appconfig.featureflag/SNA.Example25","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example25\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:12+00:00"},{"etag":"88Q-OMH6JS4CrWH39IASn8zpO2rCR0suaoHeDp7fgvc","key":".appconfig.featureflag/SNA.Example26","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example26\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:16+00:00"},{"etag":"0VRqETJ5RtZby2xUEz08upJsOLsFaiCvI-GW0i-Gyfs","key":".appconfig.featureflag/SNA.Example27","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example27\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:20+00:00"},{"etag":"BgxhOOGYVgxVEhXEIjnt6iP9BjNSyByqalbB6HFwxLw","key":".appconfig.featureflag/SNA.Example28","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example28\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:24+00:00"},{"etag":"wvPWI1BF_hLmZezh8uFD4TzEzCRJyRlwRyPMR1tjsuU","key":".appconfig.featureflag/SNA.Example29","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":\"SNA.Example29\",\"description\":\"\",\"enabled\":false,\"conditions\":{\"client_filters\":[]}}","tags":{},"locked":false,"last_modified":"2024-01-08T19:50:28+00:00"}]}'
+  recorded_at: Tue, 09 Jan 2024 07:02:58 GMT
+recorded_with: VCR 6.2.0
