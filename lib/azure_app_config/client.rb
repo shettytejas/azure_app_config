@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'base64'
-require 'digest'
-require 'net/http'
-require 'time'
+require "base64"
+require "digest"
+require "net/http"
+require "time"
 
 module AzureAppConfig
   class Client
@@ -20,7 +20,7 @@ module AzureAppConfig
     def get(path, query_params = {})
       url_builder path, query_params
 
-      request 'GET', endpoint
+      request "GET", endpoint
     end
 
     private
@@ -30,7 +30,7 @@ module AzureAppConfig
     def url_builder(path, query_params = "")
       @endpoint = URI.parse(url)
       @endpoint.path = path
-      @endpoint.query = query_params + '&api-version=' + api_version
+      @endpoint.query = "#{query_params}&api-version=#{api_version}"
     end
 
     def hmac_authentication_headers(request_path, method, content = nil)
@@ -47,11 +47,11 @@ module AzureAppConfig
       }
     end
 
-    def request(request_type, endpoint, body = nil)
+    def request(request_type, endpoint, _body = nil)
       headers = hmac_authentication_headers(endpoint.request_uri, request_type)
 
       case request_type
-      when 'GET'
+      when "GET"
         Net::HTTP.get_response(endpoint, headers)
       end
     end

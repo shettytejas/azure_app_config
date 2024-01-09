@@ -2,8 +2,8 @@
 
 require "azure_app_config"
 
-require 'webmock/rspec'
-require 'vcr'
+require "webmock/rspec"
+require "vcr"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
