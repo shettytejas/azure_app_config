@@ -7,6 +7,8 @@ require "time"
 
 module AzureAppConfig
   class Client
+    GET_METHOD = 'GET'
+
     def initialize
       @api_version = ENV.fetch("AZURE_APP_CONFIG_API_VERSION", "1.0")
       @credential = ENV.fetch("AZURE_APP_CONFIG_CREDENTIAL")
@@ -19,7 +21,7 @@ module AzureAppConfig
 
     def get(path, query_params = {})
       endpoint = url_builder path, query_params
-      request "GET", endpoint
+      request GET_METHOD, endpoint
     end
 
     private
@@ -34,8 +36,8 @@ module AzureAppConfig
       endpoint
     end
 
-    def hmac_authentication_headers(request_path, method, content = nil)
-      hashed_content = Base64.strict_encode64(Digest::SHA256.digest(content.to_s))
+    def hmac_authentication_headers(request_path, method, json_content = "")
+      hashed_content = Base64.strict_encode64 Digest::SHA256.digest(json_content)
       timestamp = Time.now.httpdate
 
       raw_string = "#{method}\n#{request_path}\n#{timestamp};#{host};#{hashed_content}"
@@ -48,11 +50,11 @@ module AzureAppConfig
       }
     end
 
-    def request(request_type, endpoint, _body = nil)
-      headers = hmac_authentication_headers(endpoint.request_uri, request_type)
+    def request(request_type, endpoint, body = nil)
+      headers = hmac_authentication_headers(endpoint.request_uri, request_type, body.to_s)
 
       case request_type
-      when "GET"
+      when GET_METHOD
         Net::HTTP.get_response(endpoint, headers)
       end
     end
