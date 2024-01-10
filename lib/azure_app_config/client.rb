@@ -18,8 +18,7 @@ module AzureAppConfig
     end
 
     def get(path, query_params = {})
-      url_builder path, query_params
-
+      endpoint = url_builder path, query_params
       request "GET", endpoint
     end
 
@@ -28,9 +27,11 @@ module AzureAppConfig
     attr_reader :api_version, :credential, :host, :decoded_secret, :signed_headers, :endpoint, :url
 
     def url_builder(path, query_params = "")
-      @endpoint = URI.parse(url)
-      @endpoint.path = path
-      @endpoint.query = "#{query_params}&api-version=#{api_version}"
+      endpoint = URI.parse(url)
+      endpoint.path = path
+      endpoint.query = "#{query_params}&api-version=#{api_version}"
+
+      endpoint
     end
 
     def hmac_authentication_headers(request_path, method, content = nil)
