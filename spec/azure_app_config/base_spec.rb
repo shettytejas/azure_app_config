@@ -342,7 +342,7 @@ RSpec.describe AzureAppConfig::Base do
       end
 
       describe "as array" do
-        let(:name) { ["prod", "test"] }
+        let(:name) { %w[prod test] }
 
         it "returns matching labels" do
           VCR.use_cassette("labels/with_name_param_as_array") do

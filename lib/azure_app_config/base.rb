@@ -38,7 +38,7 @@ module AzureAppConfig
     end
 
     def labels(name: nil)
-      name, _ = normalise_parameters(name: name, label: nil)
+      name, = normalise_parameters(name: name, label: nil)
       path = "/labels"
 
       query_params = URI.encode_www_form(name: name.join(","))
